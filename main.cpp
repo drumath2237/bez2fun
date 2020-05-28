@@ -1,7 +1,7 @@
 #include <iostream>
 
-#define N 1000
-#define ETA 0.07
+#define N 500
+#define ETA 0.2
 
 struct vector2
 {
@@ -10,8 +10,8 @@ struct vector2
 
 // set bezier control points
 vector2 p0 = {-1.0, -1.0};
-vector2 p1 = {-0.2, -0.6};
-vector2 p2 = {0.2, 0.8};
+vector2 p1 = {-0.2, -0.8};
+vector2 p2 = {0.4, 0.8};
 vector2 p3 = {1.0, 1.0};
 
 vector2 calcBezier(double t)
