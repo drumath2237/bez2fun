@@ -111,8 +111,6 @@ namespace Bez2Fun
 #pragma endregion a5
     }
 
-    std::cout << a0 << "x^5+" << a1 << "x^4+" << a2 << "x^3+" << a3 << "x^2+" << a4 << "x+" << a5 << std::endl;
-
     res_params[0] = a0;
     res_params[1] = a1;
     res_params[2] = a2;
