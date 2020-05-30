@@ -19,7 +19,13 @@ int main()
 
   funcEstimation(bezier, res);
 
-  cout << res[0] << " " << res[1] << endl;
+  cout << res[0] << " "
+        << res[1] << " "
+        << res[2] << " "
+        << res[3] << " "
+        << res[4] << " "
+        << res[5] << " "
+        << endl;
 
   return 0;
 }
