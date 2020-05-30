@@ -45,7 +45,7 @@ int main()
     {
       double t_i = (double)i / (double)N;
       vector2 b = calcBezier(t_i);
-      dE_da0 += (b.y - calcYChilda4d(a0, a1, a2, a3, a4, a5, b.x)) * b.x * b.x * b.x * b.x*b.x;
+      dE_da0 += (b.y - calcYChilda4d(a0, a1, a2, a3, a4, a5, b.x)) * b.x * b.x * b.x * b.x * b.x;
     }
     dE_da0 *= -2.0 / (double)N;
     a0_new = a0 - ETA * dE_da0;
@@ -59,7 +59,7 @@ int main()
     {
       double t_i = (double)i / (double)N;
       vector2 b = calcBezier(t_i);
-      dE_da1 += (b.y - calcYChilda4d(a0, a1, a2, a3, a4, a5, b.x)) * b.x * b.x * b.x*b.x;
+      dE_da1 += (b.y - calcYChilda4d(a0, a1, a2, a3, a4, a5, b.x)) * b.x * b.x * b.x * b.x;
     }
     dE_da1 *= -2.0 / (double)N;
     a1_new = a1 - ETA * dE_da1;
@@ -73,7 +73,7 @@ int main()
     {
       double t_i = (double)i / (double)N;
       vector2 b = calcBezier(t_i);
-      dE_da2 += (b.y - calcYChilda4d(a0, a1, a2, a3, a4, a5, b.x)) * b.x * b.x*b.x;
+      dE_da2 += (b.y - calcYChilda4d(a0, a1, a2, a3, a4, a5, b.x)) * b.x * b.x * b.x;
     }
     dE_da2 *= -2.0 / (double)N;
     a2_new = a2 - ETA * dE_da2;
@@ -87,7 +87,7 @@ int main()
     {
       double t_i = (double)i / (double)N;
       vector2 b = calcBezier(t_i);
-      dE_da3 += (b.y - calcYChilda4d(a0, a1, a2, a3, a4, a5, b.x)) * b.x*b.x;
+      dE_da3 += (b.y - calcYChilda4d(a0, a1, a2, a3, a4, a5, b.x)) * b.x * b.x;
     }
     dE_da3 *= -2.0 / (double)N;
     a3_new = a3 - ETA * dE_da3;
@@ -101,7 +101,7 @@ int main()
     {
       double t_i = (double)i / (double)N;
       vector2 b = calcBezier(t_i);
-      dE_da4 += (b.y - calcYChilda4d(a0, a1, a2, a3, a4, a5, b.x))*b.x;
+      dE_da4 += (b.y - calcYChilda4d(a0, a1, a2, a3, a4, a5, b.x)) * b.x;
     }
     dE_da4 *= -2.0 / (double)N;
     a4_new = a4 - ETA * dE_da4;
@@ -121,7 +121,6 @@ int main()
     a5_new = a5 - ETA * dE_da5;
     a5 = a5_new;
 #pragma endregion a5
-
   }
 
   std::cout << a0 << "x^5+" << a1 << "x^4+" << a2 << "x^3+" << a3 << "x^2+" << a4 << "x+" << a5 << std::endl;
